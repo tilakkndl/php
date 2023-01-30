@@ -1,5 +1,9 @@
  <?php
-echo "Hello PHP world";
+ //constant
+ define("NAME", "Tilak");
+//variable
+$name = "kandel";
+$age = 21;
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,5 +16,7 @@ echo "Hello PHP world";
 <body>
     <?php echo "working on php";
     ?>
+    <div><?php echo NAME; ?></div>
+    <div><?php echo $name; ?></div>
 </body>
 </html>
