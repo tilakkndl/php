@@ -1,9 +1,20 @@
  <?php
- //constant
- define("NAME", "Tilak");
-//variable
-$name = "kandel";
-$age = 21;
+ $stringOne = 'My name is';
+ $stingTwo = 'Ram';
+ echo $stringOne.$stingTwo."\n";
+
+$name = 'mario';
+echo "hey, my name is". $stingTwo."\n";
+echo "Hey , my name is $name";
+//escape character
+echo "Santosh said \"hah\"\n";
+echo 'santosh said "hah"\n';
+echo $name[1];
+
+echo strlen($name);
+echo strtolower($name);
+echo strtoupper($name);
+echo str_replace("m", "w", $name);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +27,7 @@ $age = 21;
 <body>
     <?php echo "working on php";
     ?>
-    <div><?php echo NAME; ?></div>
+    <!-- <div><?php echo NAME; ?></div> -->
     <div><?php echo $name; ?></div>
 </body>
 </html>
