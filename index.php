@@ -1,20 +1,30 @@
  <?php
- $stringOne = 'My name is';
- $stingTwo = 'Ram';
- echo $stringOne.$stingTwo."\n";
+//indexed array
+$peopleOne = ["Tialk", "ceysat"];
+$peopleOne[1];
+$peopleTwo = array('ken', "chun-li");
 
-$name = 'mario';
-echo "hey, my name is". $stingTwo."\n";
-echo "Hey , my name is $name";
-//escape character
-echo "Santosh said \"hah\"\n";
-echo 'santosh said "hah"\n';
-echo $name[1];
+$ages = [20, 30, 40, 50];
+print_r($ages);
+$ages[1] = 25;
+$ages[] = 33;
+//push func
+array_push($ages, 77);
+//array lentgth
+echo count($ages);
+//merge array
+$peopleThree = array_merge($peopleOne, $peopleTwo);
+print_r($peopleThree);
+print_r($ages);
+//associative array, 
+$ninjasOne = ["shun"=>"Black", "Mario"=>"Orange", "luige"=>"Brown"];
+echo $ninjasOne["Mario"];
 
-echo strlen($name);
-echo strtolower($name);
-echo strtoupper($name);
-echo str_replace("m", "w", $name);
+$ninjasTwo = array("bowser"=>"green", 'peach'=>"yellow");
+$ninjasOne["peach"] = "yellow";
+echo count($ninjasOne);
+print_r($ninjasOne);
+
 ?> 
 <!DOCTYPE html>
 <html lang="en">
