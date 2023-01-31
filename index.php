@@ -25,6 +25,21 @@ $ninjasOne["peach"] = "yellow";
 echo count($ninjasOne);
 print_r($ninjasOne);
 
+//multidimensionalArray
+$blogs=[
+    ["title"=>"marion party", "author"=>"mario", "content"=>'lorem', "like"=>30],
+    ["title"=>"marion kart chaeadts", "author"=>"toad", "content"=>"lorem", "like"=>25],
+    ["title"=>"Selda hidden chests", "author"=>"link", "content"=>"lorem", "like"=>50]
+];
+
+echo $blogs[2]["author"];
+
+
+$blogs[] = ["title"=>"castle pary", "author"=>"peach", 'content'=>"lorem", "like"=>100];
+echo count($blogs);
+print_r($blogs);
+$popped = array_pop($blogs);
+print_r($popped);
 ?> 
 <!DOCTYPE html>
 <html lang="en">
