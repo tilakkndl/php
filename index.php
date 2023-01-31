@@ -1,20 +1,15 @@
  <?php
-
-//comparision booleans (true or false)
-echo true;//"1"
-echo false;//""
-//numbers
-echo 5<10;
-echo 5==10;
-echo 5 != 10;
-
-//strings
-echo 'shan'<'yoshi'; //true as s comes faster than y
-echo 'shan'>'Shan'; //true
-
-//loose vs strict equal comparisions
-echo 5 == "5" // true;
-echo 5 === "5"//false
+//conditional statements
+$price = 20;
+if($price<30){
+    echo "the condition matched";
+}
+elseif(price == 30){
+    echo "the price is 30";
+}
+else{
+    echo "Condition not met";
+}
 ?> 
 <!DOCTYPE html>
 <html lang="en">
