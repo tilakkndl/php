@@ -1,45 +1,23 @@
  <?php
-//indexed array
-$peopleOne = ["Tialk", "ceysat"];
-$peopleOne[1];
-$peopleTwo = array('ken', "chun-li");
+//loops
+//for loop
+for($i=0;$i<5;$i++){
+    echo "Loop is tobe run for 5th times". '<br/>';
+}
 
-$ages = [20, 30, 40, 50];
-print_r($ages);
-$ages[1] = 25;
-$ages[] = 33;
-//push func
-array_push($ages, 77);
-//array lentgth
-echo count($ages);
-//merge array
-$peopleThree = array_merge($peopleOne, $peopleTwo);
-print_r($peopleThree);
-print_r($ages);
-//associative array, 
-$ninjasOne = ["shun"=>"Black", "Mario"=>"Orange", "luige"=>"Brown"];
-echo $ninjasOne["Mario"];
+//for each loop
+$blogs = ["blog1", "blog2", "blog3"];
+foreach($blogs as $blog){
+    echo $blog.'<br/>';
+    // echo "for each loop";
+}
 
-$ninjasTwo = array("bowser"=>"green", 'peach'=>"yellow");
-$ninjasOne["peach"] = "yellow";
-echo count($ninjasOne);
-print_r($ninjasOne);
-
-//multidimensionalArray
-$blogs=[
-    ["title"=>"marion party", "author"=>"mario", "content"=>'lorem', "like"=>30],
-    ["title"=>"marion kart chaeadts", "author"=>"toad", "content"=>"lorem", "like"=>25],
-    ["title"=>"Selda hidden chests", "author"=>"link", "content"=>"lorem", "like"=>50]
-];
-
-echo $blogs[2]["author"];
-
-
-$blogs[] = ["title"=>"castle pary", "author"=>"peach", 'content'=>"lorem", "like"=>100];
-echo count($blogs);
-print_r($blogs);
-$popped = array_pop($blogs);
-print_r($popped);
+//while loop
+$i=0;
+while($i<count($blogs)){
+    echo $blogs[$i];
+    $i++;
+}
 ?> 
 <!DOCTYPE html>
 <html lang="en">
