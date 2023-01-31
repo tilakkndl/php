@@ -1,15 +1,15 @@
  <?php
-//conditional statements
-$price = 20;
-if($price<30){
-    echo "the condition matched";
+ //function
+ function sayHello($name = "Tilak"){
+    echo "Good morning $name";
+ }
+//  sayHello("Santosh");
+
+function formatProduct($product){
+    return "{$product['name']} costs Rs. {$product['price']} to buy";
 }
-elseif(price == 30){
-    echo "the price is 30";
-}
-else{
-    echo "Condition not met";
-}
+$stat = formatProduct(["name"=>"Gold star", "price"=>3000]);
+echo $stat;
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +20,8 @@ else{
     <title>Document</title>
 </head>
 <body>
-    <?php echo "working on php";
-    ?>
+    <!-- <?php echo "working on php";
+    ?> -->
     <!-- <div><?php echo NAME; ?></div> -->
     <div><?php echo $name; ?></div>
 </body>
