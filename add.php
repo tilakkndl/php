@@ -5,7 +5,7 @@
 	// 	echo $_GET['title'] . '<br />';
 	// 	echo $_GET['ingredients'] . '<br />';
 	// }
-
+include("config/db_connect.php");
 	$email = $ingredients = $title = "";
 	$errors = array('email'=>"", 'title'=>"", "ingredients"=>"");
 
@@ -49,7 +49,22 @@ $errors['ingredients'] = "Ingredients mus be a comma seperated";
 		// echo "Errors in the form";
 	}else{
 		// echo "Form is valid";
-		header("Location: index.php");
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+		 $title = mysqli_real_escape_string($conn, $_POST['title']);
+		  $ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
+
+		  //create sql
+		  $sql = "INSERT INTO pizzas(title, email, ingridents) VALUES ('$title', '$email', '$ingredients')";
+		  
+		  //save to db and check
+		  if(mysqli_query($conn, $sql)){
+			//success
+header("Location: index.php");
+		  }else{
+			echo 'Query error'. mysqli_error(($conn));
+		  }
+
+		
 	}
 
 	}
